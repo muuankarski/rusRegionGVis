@@ -4,7 +4,7 @@ In this repository you will find animated visualisations of Russian Regional Sta
 
 Repository consists of two R-script. `getData.R` extracts and processes the data and `plotGVis.R` generates the visualisation into `rusRegionGVis.html` file.
 
-Folder `data` has file `datPlotWide.csv` that you can directly feed for googleVis's `gvisMotionChart()` -function. You can try that locally with following code:
+Folder `data` has file `datPlotWide.csv` that you can directly feed for googleVis's `gvisMotionChart()` -function. You can try that locally with the code below. It should open a browser with the bubble plot.
 
 ```
 # Download the data
@@ -13,7 +13,7 @@ GHurl <- getURL("https://raw.github.com/muuankarski/rusRegionGVis/master/data/da
 dat <- read.csv(text = GHurl)
 # Create the bubble plot
 library(googleVis)
-print(gvisMotionChart(datPlotWide, idvar="region_en", timevar="year")
+plot(gvisMotionChart(datPlotWide, idvar="region_en", timevar="year"))
 ```
 
-A fine tuned visualization is [here](https://rawgithub.com/muuankarski/rusRegionGVis/master/rusRegionGVis.html).
+[Click here](https://rawgithub.com/muuankarski/rusRegionGVis/master/rusRegionGVis.html) for fine tuned visualization!
