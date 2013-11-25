@@ -106,3 +106,5 @@ library(reshape2)
 datPlotWide <- dcast(data=datPlot, region_en + year + level ~ indicator, 
                      value.var="value")
 
+write.csv(datPlotWide, file="data/datPlotWide.csv")
+
